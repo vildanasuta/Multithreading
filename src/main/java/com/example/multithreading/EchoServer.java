@@ -12,7 +12,7 @@ public class EchoServer {
             server.setReuseAddress(true);
             while(true) {
                 Socket client = server.accept();
-                System.out.println("New client connected" + client.getInetAddress().getHostAddress());
+                System.out.println("New client connected:  " + client.getInetAddress().getHostAddress());
                 ClientHandler handler = new ClientHandler(client);
                 new Thread(handler).start();
             }

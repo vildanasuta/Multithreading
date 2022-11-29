@@ -32,7 +32,7 @@ public class ClientHandler implements Runnable{
             in=new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             String line;
             while((line=in.readLine())!=null){
-                System.out.printf("Sent from client: "+line);
+                System.out.printf("Sent from client: "+line+System.lineSeparator());
                 out.println(line);
             }
         } catch (IOException e) {
